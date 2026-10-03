@@ -1,1 +1,133 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistem Informasi Data Mahasiswa - Praktikum 1- Kelas B</h1>
+        <p>Sistem ini adalah sistem yang dapat menampilkan data mahasiswa</p>
+        <img src="pas foto.jpg" alt="Foto Mahasiswa" width="100" height="130">
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="#informasi">Informasi</a></li>
+            <li><a href="#daftar mahasiswa">Daftar Mahasiswa</a></li>
+            <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <main>
+        <section id="informasi">
+            <h2>Informasi Sistem</h2>
+            <p>Sebuah Sistem Sederhana untuk menampilkan data mahasiswa</p>
+            <article>
+                <h3>Percobaan Praktikum</h3>
+                <p>Ini adalah percobaan Praktikum Pemweb</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="daftar mahasiswa">
+            <h2>Daftar Mahasiswa Aktif</h2>
+            <p>Berikut adalah daftar mahasiswa aktif</p>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>NPM</th>
+                        <th>Nama Lengkap</th>
+                        <th>Program Studi</th>
+                        <th>Angkatan</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="Foto1.jpg" alt="Foto Mahasiswa" width="40"></td>
+                        <td>2415061051</td>
+                        <td>Hafidz Azka Rikzi</td>
+                        <td>Teknik Informatika</td>
+                        <td>24</td>
+                        <td>Azka@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="Foto1.jpg" alt="Foto Mahasiswa" width="40"></td>
+                        <td>2415061001</td>
+                        <td>Hafidz Abdul Ghofar</td>
+                        <td>Teknik Informatika</td>
+                        <td>24</td>
+                        <td>ghofar@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="Foto1.jpg" alt="Foto Mahasiswa" width="40"></td>
+                        <td>2415061002</td>
+                        <td>Rahman Hidayat</td>
+                        <td>Teknik Informatika</td>
+                        <td>24</td>
+                        <td>hidayat@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="form-tambah">
+            <h2>Tambah Mahasiswa Baru</h2>
+            <p>Masukan Data untuk tambah mahasiswa baru</p>
+            <form action="proses_tambah.php" method="post">
+                <fieldset>
+                    <legend>Form menambah mahasiswa</legend>
+                    <p>
+                        <label for="npm">NPM:</label>
+                        <input type="text" id="npm" name="npm" required>
+                    </p>
+                    <P>
+                        <label for="nama">Nama Lengkap:</label>
+                        <br><input type="text" id="nama" name="nama" placeholder="M.Darunnadwah" required minlength="3" maxlength="100"><br>
+                        <small>Nama lengkap harus antara 3-100 karakter</small>
+                    </P>
+                    <p>
+                        <label for="program_studi">Program Studi:</label>
+                        <select id="program_studi" name="program_studi" required>
+                            <option value="">Pilih Program Studi</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Manajemen Informatika">Manajemen Informatika</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="Tahun Angkatan">Tahun Angkatan:</label><br>
+                        <input type="number" id="angkatan" placeholder="Contoh 2024" required min="2000" max="2099" step="1"><br>
+                        <small>Tahun angkatan harus antara 2000 hingga 2099</small>
+                    </p>
+
+                    <p>
+                        <label for="email">Alamat Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Contoh: email@example.com" required><br>
+                        <small>Masukkan alamat email yang valid</small>
+                    </p>
+
+                    <p>
+                        <button type="submit"> Simpan Data Mahasiswa</button>
+                        <button type="reset"> Reset Formulir</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
