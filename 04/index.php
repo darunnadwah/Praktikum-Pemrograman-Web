@@ -237,4 +237,3 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 <!-- memanggil file footer.php -->
-
